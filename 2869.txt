@@ -1,0 +1,12 @@
+x = int(input())
+count = 0
+while count <=x:
+    for a in range(x):
+        y = list(range(x+1))
+        for b in y:
+            if a%b ==0:
+            count +=1
+        x+=1
+print(count)
+            
+            

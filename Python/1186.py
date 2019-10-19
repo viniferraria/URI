@@ -6,12 +6,11 @@ def createMatrix():
 
 
 def belowSecundary(matrix):
-  soma = 0
   total = 0
+  soma = 0
   for each in range(1, 12):
-    temp = matrix[each][11: 11 - each:-1]
-    total += len(temp)
-    soma += sum(temp)
+    total += len(matrix[each])
+    soma += sum(matrix[each][12: 12 - each:-1])
   return soma, total
 
 
@@ -20,10 +19,10 @@ def main():
   matriz = createMatrix()
   soma, total = belowSecundary(matriz)
   if opt.upper() == "S":
-    print("%.1f" %soma)
+    return "%.1f".format(soma)
   elif opt.upper() == "M":
     media = soma/total
-    print("%.1f" %media)
+    return "%.1f".format(media)
 
 
 main()
